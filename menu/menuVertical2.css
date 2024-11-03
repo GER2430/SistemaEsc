@@ -1,0 +1,185 @@
+:root{
+    --width: 300px;
+    --padding: 10px;
+    --bgcolor: rgb(229, 226, 226);
+    --hovercolor: rgb(221, 218, 218);
+    --width-collapsed: 50px;
+}
+body{
+    background-color: #fffdfd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+}
+.body-expanded{
+    margin-left: var(--width);
+}
+#main-container{
+    color: white;
+}
+
+#sidebar{
+    background-color: var(--bgcolor);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#sidemnu a{
+    color: white;
+    text-decoration: none;
+}
+
+/*
+HEADER
+*/
+
+#sidemenu #header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+}
+#sidebar #header #title{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#sidebar #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+#sidebar #header #menu-btn{
+    display: inline-block;
+}
+#sidebar #header #menu-btn{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+#sidebar #header #menu-btn:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidebar #header #menu-btn .btn-hamburger{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+/*
+  PROFILE
+*/
+#sidebar #profile{
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--padding) 0;
+    text-align: center;
+}
+#sidebar #profile #photo{
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+}
+
+#sidebar #profile #photo img{
+    border-radius: 50%;
+    width: 60%;
+}
+
+#sidebar #profile #photo,#sidebar #profile #name{
+    font-size: 24px;
+    padding: var(--padding) 0;
+    overflow: hidden;
+}
+/*
+  ITEM
+*/
+#sidebar #menu-items{
+    overflow: hidden;
+}
+#sidebar #menu-items .item{
+    width: var(--width);
+}
+#sidebar #menu-items .item .icon{
+    display: inline-block;
+}
+#sidebar #menu-items .item .icon,
+#sidebar #menu-items .item .title{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+#sidebar #menu-items .item a{
+    display: block;
+}
+#sidebar #menu-items .item a:hover{
+    background-color: var(--hovercolor);
+}
+#sidebar #menu-items .item .icon{
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--width-collapsed);
+}
+#sidebar #menu-items .item .icon img{
+    width: 100%;
+}
+#sidebar #menu-items .item .title{
+    padding: var(--padding) 0;
+}
+#sidebar #menu-items .item.separator{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;
+}
+
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #title span{
+    width: calc(var(--width) -var(--width-collapsed) - 5px);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.menu-expanded #profile #photo{
+    width: 200px;
+}
+.menu-expanded #profile #name{
+    width: 100%;
+}
+
+.menu-collapsed{
+    width: var(--width-collapsed);
+}
+
+.menu-collapsed #header #title{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.menu-collapsed #header #name{
+    display: none;
+}
+.menu-collapsed .title{
+    width: 100px;
+}
+.btn{
+text-decoration: none;
+border: 1px solid blue;
+background-color: blue;
+color: white;
+font-weight: bold;
+}

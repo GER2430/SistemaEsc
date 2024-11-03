@@ -1,0 +1,8 @@
+Options All -Indexes
+
+
+
+AuthName "Acceso Restringido"
+AuthType Basic
+AuthUserFile "/wamp64/www/SISTEMAESCOLAR/.htpasswd"
+require valid-user
